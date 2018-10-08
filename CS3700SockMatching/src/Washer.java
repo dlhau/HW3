@@ -19,11 +19,14 @@ public class Washer implements Runnable
 	{
 		for (String message = this.message.take(); !message.equals("MATCHING"); message = this.message.take())
         {	
-            try
-            {
-            	System.out.println("Destroyed " + message + " socks");
-            }
-            catch (Exception e) {} 
+			if(!(message.equals("MATCHING") || message.equals("4")))
+			{
+				try
+	            {
+	            	System.out.println("Destroyed " + message + " socks");
+	            }
+	            catch (Exception e) {} 
+			}
         }
 		
 	}
