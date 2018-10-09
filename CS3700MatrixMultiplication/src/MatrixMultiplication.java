@@ -118,7 +118,7 @@ public class MatrixMultiplication
         Thread.sleep(sleepTime);
         end = System.currentTimeMillis() - start;
         
-        System.out.println("Time with 8 Threads: " + end + " milliseconds\n");
+        System.out.println("Time with 8 Threads: " + end + " ms\n");
         
         // ----------------------------------------------------------------------------------------------------------------
         
@@ -187,7 +187,7 @@ public class MatrixMultiplication
         Thread.sleep(sleepTime);
         end = System.currentTimeMillis() - start;
         
-        System.out.println("Time with 8 Threads: " + end + " milliseconds\n");
+        System.out.println("Time with 8 Threads: " + end + " ms\n");
 
 	}
 
