@@ -107,13 +107,15 @@ public class OrderedLeaderElection
 					{
 						wait.set(true);
 						NOTIFY_LOCK.wait(1000);
-						System.out.println("Name: " + getName() + ", Value: " + getValue() + " Leader: " + electedLeader.getName());
+						System.out.println("Name: " + getName() + ", Value: " + getValue() + 
+								" Leader: " + electedLeader.getName());
 						electedLeader = currentElectedLeader;
 					}
 					catch (InterruptedException e)
 					{
 						electedLeader = currentElectedLeader;
-						System.out.println("Name: " + getName() + ", Value: " + getValue() + " Leader: " + electedLeader.getName());
+						System.out.println("Name: " + getName() + ", Value: " + getValue() + 
+								" Leader: " + electedLeader.getName());
 					} catch (Exception e) {}
 				}
 			}
